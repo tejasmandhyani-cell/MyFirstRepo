@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="./generated.css">
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">ResumeGeneration.com</a></div>
+            <ul>
+                <li id="n1"><a href="./Login.html">Home</a></li>
+                <li id="n1"><a href="./about.html">About</a></li>
+                <Button><a href="./loginpage.html">Login</a></Button>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="half1">
+    <img  id="i1">
+     <ul id="re">
+        <li id="res"></li>
+        <li id="res1"></li>
+        <li id="res2"></li>
+     </ul>
+     <hr>
+     <br>
+     <br>
+     <ul id="u2">
+        <li id="ag"></li>
+        <li id="ge"></li>
+        <li id="mo"></li>
+        <li id="gm"></li>
+        <li id="de"></li>
+        <li id="ad"></li>
+       
+     </ul>
+        </div>
+        <div class="half2">
+            <h2 id="h2">Achievements</h2>
+            <hr>
+        <ul> 
+            <li id="title1"></li>
+            <li id="desc"></li>
+        </ul>
+        <h2 id="h2">Experience</h2>
+        <hr>
+        <ul>
+            <li id="title2"></li>
+            <li id="company"></li>
+            <li id="location"></li>
+            <li id="sdate"></li>
+            <li id="edate"></li>
+            <li id="desc2"></li>
+        </ul>
+        <h2 id="h2">Skills</h2>
+        <hr>
+        <ul>
+            <li id="skill"></li>
+        </ul>
+        </div>
+</div>
+<script>
+       var data=window.location.search;
+       var params=new URLSearchParams(data);
+    document.getElementById("res").innerHTML=data;
+    console.log(params);
+    var fname=params.get("fname");
+    var mname=params.get("mname");
+    var gmail=params.get("gmail");
+    var age=params.get("age");
+    var address=params.get("address");
+    var mobileno=params.get("mobno");
+    var lname=params.get("lname");
+    var gender=params.get("gender");
+    var designation=params.get("desg");
+    var title1=params.get("title1");
+    var Description1=params.get("desc");
+    var title2=params.get("title2");
+    var startdate=params.get("sdate");
+    var company=params.get("com");
+    var enddate=params.get("edate");
+    var loc=params.get("loc");
+    var description2=params.get("desc2");
+    var skill=params.get("skill");
+    var image=params.get("img");
+   /*  document.write(fname);
+    document.write(lname);
+    document.write(age); */
+    //writing on to the webpage
+    var img=document.getElementById("i1");
+    img.src=image;
+    document.getElementById("res").innerHTML=fname;
+    document.getElementById("res1").innerHTML=mname;
+    document.getElementById("res2").innerHTML=lname;
+    document.getElementById("mo").innerHTML=mobileno;
+    document.getElementById("gm").innerHTML=gmail;
+    document.getElementById("de").innerHTML=designation;
+    document.getElementById("ad").innerHTML=address;
+    document.getElementById("ag").innerHTML=age;
+    document.getElementById("ge").innerHTML=gender;
+    document.getElementById("title1").innerHTML=title1;
+    document.getElementById("desc").innerHTML=Description1;
+    document.getElementById("title2").innerHTML=title2;
+    document.getElementById("company").innerHTML=company;
+    document.getElementById("location").innerHTML=loc;
+    document.getElementById("sdate").innerHTML=startdate;
+    document.getElementById("edate").innerHTML=enddate;
+    document.getElementById("desc2").innerHTML=description2;
+    document.getElementById("skill").innerHTML=skill;
+     //writing into the paragraph
+    function display()
+    {
+    document.getElementById("p1").innerHTML=fname;
+    }
+    </script>
+</body>
+</html>
